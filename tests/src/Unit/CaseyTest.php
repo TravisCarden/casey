@@ -31,4 +31,11 @@ class CaseyTest extends UnitTestCase {
     ];
   }
 
+  public function testToCamelCaseInvalidInput() {
+    // Arrange.
+    $casey = new Casey();
+    // Act.
+    $casey->toCamelCase([]);
+  }
+
 }
