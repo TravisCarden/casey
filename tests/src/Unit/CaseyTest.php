@@ -7,13 +7,23 @@ use Drupal\Tests\UnitTestCase;
 
 class CaseyTest extends UnitTestCase {
 
-  public function testToCamelCase() {
+  /**
+   * @dataProvider providerTestToCamelCase
+   */
+  public function testToCamelCase($input, $expected, $message) {
     // Arrange.
     $casey = new Casey();
     // Act.
-    $output = $casey->toCamelCase('');
+    $actual = $casey->toCamelCase($input);
     // Assert.
-    $this->assertSame('', $output, 'Empty string');
+    $this->assertSame($expected, $actual, $message);
+  }
+
+  public function providerTestToCamelCase() {
+    return [
+      ['', '', 'Empty string.'],
+      ['LoremIpsum', 'LoremIpsum', 'Already camel case.'],
+    ];
   }
 
 }
