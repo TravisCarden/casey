@@ -31,6 +31,10 @@ class CaseyTest extends UnitTestCase {
     ];
   }
 
+  /**
+   * @expectedException \AssertionError
+   * @expectedExceptionMessage Input must be a string.
+   */
   public function testToCamelCaseInvalidInput() {
     // Arrange.
     $casey = new Casey();
