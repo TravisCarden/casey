@@ -27,6 +27,7 @@ class CaseyTest extends UnitTestCase {
       ['lorem ipsum dolor sit amet', 'LoremIpsumDolorSitAmet', 'Multiple words.'],
       ['lorem  ipsum', 'LoremIpsum', 'Multiple spaces between words.'],
       ['lorem_ipsum', 'LoremIpsum', 'Underscore-separated words.'],
+      ["lorem\t\n@!-ipsum", 'LoremIpsum', 'Unusual word separators.'],
     ];
   }
 
