@@ -26,6 +26,7 @@ class CaseyTest extends UnitTestCase {
       ['lorem', 'Lorem', 'Single word.'],
       ['lorem ipsum dolor sit amet', 'LoremIpsumDolorSitAmet', 'Multiple words.'],
       ['lorem  ipsum', 'LoremIpsum', 'Multiple spaces between words.'],
+      ['lorem_ipsum', 'LoremIpsum', 'Underscore-separated words.'],
     ];
   }
 
